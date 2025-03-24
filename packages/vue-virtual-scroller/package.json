@@ -1,6 +1,6 @@
 {
   "name": "@nfpocket/vue-virtual-scroller",
-  "version": "2.0.0-beta.8",
+  "version": "2.0.0",
   "description": "Smooth scrolling for any amount of data",
   "author": {
     "name": "Guillaume Chau",
