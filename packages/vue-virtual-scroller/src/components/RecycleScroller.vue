@@ -549,7 +549,7 @@ export default {
           view = pool[i]
           if (view.nr.used) {
             const viewVisible = view.nr.index >= startIndex && view.nr.index < endIndex
-            const viewSize = itemSize || sizes[i].size
+            const viewSize = itemSize || sizes[i]?.size
             if (!viewVisible || !viewSize) {
               this.removeAndRecycleView(view)
             }
@@ -560,7 +560,7 @@ export default {
       // Step 2: Assign a view and update props for every view that became visible
       let item, type
       for (let i = startIndex; i < endIndex; i++) {
-        const elementSize = itemSize || sizes[i].size
+        const elementSize = itemSize || sizes[i]?.size
         if (!elementSize) continue
         item = items[i]
         const key = keyField ? item[keyField] : i
